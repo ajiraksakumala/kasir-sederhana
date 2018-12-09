@@ -114,7 +114,7 @@ export default class Kasir extends Component {
                                                         <td>{value.harga}</td>
                                                         <td>{value.qty}</td>
                                                         <td>{value.harga*value.qty}</td>
-                                                        <td>
+                                                        <td className="text-center">
                                                             <Button color="link" onClick={() => this.handleEdit(key)}>Ubah</Button>
                                                             <Button color="danger" onClick={() => this.handleDelete(key)}>Hapus</Button>
                                                         </td>
