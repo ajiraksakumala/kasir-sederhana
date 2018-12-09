@@ -67,10 +67,12 @@ export default class Kasir extends Component {
     componentWillUpdate(nextProps, nextState) {
         const data = JSON.parse(localStorage.getItem("data"))
         let totalAmount = 0
-        data.map((value, index)=>{
-            totalAmount += value.harga*value.qty
-        })
-        nextState.total = totalAmount
+        if(data != null) {
+            data.map((value, index)=>{
+                totalAmount += value.harga*value.qty
+            })
+            nextState.total = totalAmount
+        }
 
     }
 
