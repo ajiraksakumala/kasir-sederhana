@@ -61,6 +61,7 @@ export default class Kasir extends Component {
         const data = this.state.data
         data.splice(index, 1)
         localStorage.setItem("data", JSON.stringify(data))
+        this.componentDidMount()
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -70,6 +71,7 @@ export default class Kasir extends Component {
             totalAmount += value.harga*value.qty
         })
         nextState.total = totalAmount
+
     }
 
     componentDidMount() {
